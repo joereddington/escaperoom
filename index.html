@@ -1,35 +1,33 @@
 <!-- Display the countdown timer in an element -->
 <!-- taken from https://www.w3schools.com/howto/howto_js_countdown.asp -->
-<p id="demo"></p>
-
+<html>
+<head>
 <script>
-// Set the date we're counting down to
+/////////
+//	PAY ATTENTION HERE...
 
-var oldDateObj=new Date()
-var diff=1
-var countDownDate = new Date(oldDateObj.getTime() + diff*60000);
-
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+var minutes=0.5//THE NUMBER OF MINUTES ON THE TIMER
+var fail_destination="http://google.co.uk/" //The page to go to when the timer runs out...
+var success_destination="http://bing.co.uk/" //The page to go to when the answer is right
+var question="What is the Opposite of Up?"
+var answer="down"
 </script>
+<script src="script.js"></script>
+</head>
+<body>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>' 
+
+<p id="demo"></p>
+<p id="question"></p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo2"></p>
+
+
+
+</body>
+</html>
