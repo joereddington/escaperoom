@@ -1,0 +1,29 @@
+p#demo {
+    position:absolute;
+    right:12%;
+    top:8%;
+    font-size:400%
+}
+
+p#question {
+    position:absolute;
+    left:25%;
+    top:55%;
+    font-size:400%
+}
+input {
+    position:absolute;
+    left:46%;
+    top:66%;
+    height:10%;
+    width:30%;
+    font-size:400%
+}
+button {
+    position:absolute;
+    left:73%;
+    top:66%;
+    height:10%;
+    width:20%;
+    font-size:300%
+}
