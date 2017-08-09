@@ -35,7 +35,7 @@ function myFunction() {
 
     // If x is Not a Number or less than one or greater than 10
     if (x != answer) {
-        text = "Incorrect!";
+	    window.location.replace(fail_destination);
     } else {
         text = "Correct!";
 	    window.location.replace(success_destination);
