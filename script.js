@@ -1,6 +1,19 @@
 
 var oldDateObj=new Date()
+
+localdate=localStorage.getItem("datename");
 var countDownDate = new Date(oldDateObj.getTime() + minutes*60000);
+if (localdate!=null){
+console.log("Here");
+console.log(localdate);
+countDownDate=new Date(localdate);
+}
+//datestring=countDownDate.toString();
+//console.log(countDownDate.toString());
+
+//othedate=new Date(countDownDate.toString);
+//console.log(othedate.toString());
+
 
 
 // Update the count down every 1 second
@@ -23,7 +36,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
-    window.location.replace(fail_destination);
+    window.location.replace(failtime_destination);
   }
 }, 1000);
 
@@ -35,9 +48,11 @@ function myFunction() {
 
     // If x is Not a Number or less than one or greater than 10
     if (x != answer) {
-	    window.location.replace(fail_destination);
+	    localStorage.setItem("datename",countDownDate.toString());
+	    window.location.replace(failwrong_destination);
     } else {
         text = "Correct!";
+	    localStorage.setItem("datename",countDownDate.toString());
 	    window.location.replace(success_destination);
     }
     document.getElementById("demo2").innerHTML = text;
